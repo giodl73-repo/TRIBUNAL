@@ -10,7 +10,8 @@ independence, evidence integrity, or contestability.
 
 1. Rights-bounded caseflow screen — implemented.
 2. Official aggregate caseload and interval source pack.
-3. One bounded scheduling, diversion, or service-delivery candidate.
+3. One bounded scheduling, diversion, or service-delivery candidate —
+   implemented as the held H.R. 1702 district-court capacity envelope.
 4. Cost, capacity, disparate-effect, and reintegration audit.
 5. Independently reviewed held Taxlane pack.
 

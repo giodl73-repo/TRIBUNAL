@@ -1,0 +1,9 @@
+[package]
+name = "tribunal-judgeships"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Federal district judgeship candidate-envelope feature for TRIBUNAL"
+
+[lib]
+path = "src/lib.rs"

@@ -1,0 +1,19 @@
+# source_id=CBO-HR1702-2025
+# legislative_source_id=CONGRESS-HR1702-119
+# evidence_label=official_legislative_candidate
+# legislative_status=ordered_reported_house_committee_not_enacted
+# source_url=https://www.cbo.gov/publication/61263
+# legislative_url=https://www.congress.gov/bill/119th-congress/house-bill/1702/all-info
+# units=millions_nominal_dollars
+# boundary=FY2025 direct and appropriation outlays are each between zero and $0.5 million and are not assigned a point value; CBO scores costs but not caseflow or rights outcomes
+fiscal_year	direct_outlays_millions	appropriation_outlays_millions
+2026	3	5
+2027	4	12
+2028	7	16
+2029	8	20
+2030	10	26
+2031	12	30
+2032	14	36
+2033	15	40
+2034	18	47
+2035	20	51

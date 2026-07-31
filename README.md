@@ -22,6 +22,8 @@ strong aggregate termination volume.
 
 ```powershell
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
+cargo run --quiet -- candidate-baseline fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
+cargo run --quiet -- candidate-held-pack fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
 cargo run --quiet -- held-pack fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 cargo run --quiet -- official-held-pack fixtures/official/aousc-fjcs-2025-caseflow.tsv
@@ -32,6 +34,31 @@ source-labelled derivation of AOUSC's published national toplines; its cases and
 criminal defendants remain distinct source units and do not describe people,
 rights quality, or the reason for any adjustment.
 
+## Federal court-capacity candidate
+
+TRIBUNAL now replays CBO's official estimate for H.R. 1702, the JUDGES Act of
+2025. The committee-ordered proposal would add **65 permanent federal district
+judgeships and one temporary judgeship**, phased every two years through 2035.
+
+| FY2025-FY2035 CBO component | Outlays |
+|---|---:|
+| Judge compensation (direct spending) | $111M |
+| Court operations and reports (subject to appropriation) | $283M |
+| Combined | $394M |
+
+FY2025 direct and appropriated outlays are each reported as less than $0.5M,
+so the replay assigns neither a point value. The ten fully scored FY2026-FY2035
+rows sum exactly to CBO's eleven-year totals; combined annual cost rises from
+$8M in FY2026 to $71M in FY2035.
+
+This is real capacity and cost evidence, not proof of faster or fairer justice.
+CBO does not score filing-to-disposition time, aged pending cases, counsel,
+pretrial liberty, victim notice, evidence quality, disparity, durable
+resolution, or savings. The bill is not enacted, operating costs require
+appropriation, and appointment, confirmation, staffing, facilities, security,
+and technology milestones remain unresolved. The candidate therefore stays
+held.
+
 ## What this proves
 
 - Filed, terminated, and pending work can be reconciled.
@@ -39,18 +66,23 @@ rights quality, or the reason for any adjustment.
   manufactured accounting identity.
 - Counsel, liberty, victim protection, and disparity remain independent floors.
 - More terminations do not automatically prove just or durable resolution.
+- More judgeships do not automatically prove faster, safer, or fairer outcomes.
 - Taxlane can receive a held JUS finding without acquiring judicial authority.
 
 ## Validate
 
 ```powershell
 cargo fmt --check
-cargo test --all-targets
+cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 ```
 
 Official anchor: [Federal Judicial Caseload Statistics 2025](https://www.uscourts.gov/data-news/reports/statistical-reports/federal-judicial-caseload-statistics/federal-judicial-caseload-statistics-2025).
+
+Candidate sources: [CBO H.R. 1702 cost estimate](https://www.cbo.gov/publication/61263),
+[Congress.gov H.R. 1702 status](https://www.congress.gov/bill/119th-congress/house-bill/1702/all-info),
+and [Judicial Conference 2025 judgeship recommendations](https://www.uscourts.gov/data-news/judiciary-news/2025/03/11/judiciary-seeks-71-judgeships-meet-growing-caseloads).
 
 ## Boundary
 

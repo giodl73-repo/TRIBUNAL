@@ -5,3 +5,10 @@ version = 4
 [[package]]
 name = "tribunal"
 version = "0.1.0"
+dependencies = [
+ "tribunal-judgeships",
+]
+
+[[package]]
+name = "tribunal-judgeships"
+version = "0.1.0"
