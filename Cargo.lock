@@ -7,8 +7,13 @@ name = "tribunal"
 version = "0.1.0"
 dependencies = [
  "tribunal-judgeships",
+ "tribunal-program",
 ]
 
 [[package]]
 name = "tribunal-judgeships"
+version = "0.1.0"
+
+[[package]]
+name = "tribunal-program"
 version = "0.1.0"

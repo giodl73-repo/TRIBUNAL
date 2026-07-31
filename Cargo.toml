@@ -6,7 +6,8 @@ license = "MIT"
 description = "Rights-bounded justice caseflow analysis"
 
 [workspace]
-members = ["crates/tribunal-judgeships"]
+members = ["crates/tribunal-judgeships", "crates/tribunal-program"]
 
 [dependencies]
 tribunal-judgeships = { path = "crates/tribunal-judgeships" }
+tribunal-program = { path = "crates/tribunal-program" }

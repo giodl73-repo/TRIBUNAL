@@ -7,6 +7,13 @@ resolution and pending-change measures, and separately tests counsel, victim
 notice, pretrial liberty, and disparity floors. A throughput improvement cannot
 pass if any rights floor fails.
 
+TRIBUNAL now carries that screen through a complete bounded semantic program.
+Thirteen executable features cover caseflow, official national workload, the
+H.R. 1702 candidate and district baseline, scenarios, rights-bounded
+realization, transition/security accounting, alternatives, incidence, delivery
+feasibility, adaptive successors, normalized illustrative comparison, and an
+integrated held handoff.
+
 Its first official run now reconciles four AOUSC national workload series. The
 published 2024 start, 2025 filings, terminations, and 2025 end counts imply a
 net **+554 statistical adjustment**; district civil has the largest absolute
@@ -29,6 +36,15 @@ cargo run --quiet -- level2-held-pack fixtures/official/aousc-texas-southern-202
 cargo run --quiet -- held-pack fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 cargo run --quiet -- official-held-pack fixtures/official/aousc-fjcs-2025-caseflow.tsv
+cargo run --quiet -- program-scenarios fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-realization fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-accounting fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-alternatives fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-incidence fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-delivery fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-adaptive fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-peers fixtures/synthetic/justice-semantic-program.tsv
+cargo run --quiet -- program-held-pack fixtures/synthetic/justice-semantic-program.tsv
 ```
 
 The Cedar fixture remains synthetic. The official baseline is a compact,
@@ -78,6 +94,30 @@ admission. The source does not publish matched measures for counsel access,
 pretrial detention, victim notice, disparity, or candidate effects. H.R. 1702
 also remains unenacted. Those values stay null, so the candidate stays held.
 
+## Complete semantic-program demonstration
+
+The synthetic program makes the unresolved justice chain visible without
+creating individual decisions. Pending work rises from 18,155 to 22,000 under
+stress and recovers to 17,000 in a separate immutable version. An illustrative
+100,000-matter chain reaches 80,000 counsel-ready matters, 65,000 rights-
+compliant resolutions, and 60,000 durable resolutions. The largest loss occurs
+before rights-compliant resolution; unresolved matters are never savings.
+
+Accounting adds $60M of synthetic transition, facilities, and security work to
+the official $111M direct and $283M appropriated H.R. 1702 components. The
+$454M demonstration proves that capacity cannot be modeled without its delivery
+environment. It does not revise CBO's $394M estimate or enter Taxlane.
+
+Two of three alternatives clear a declared synthetic pending-change and rights
+screen, but TRIBUNAL selects neither. Five-group incidence reconciles to zero
+and shows accused people carrying the largest burden. Only five of ten delivery
+gates pass: enactment, appropriation, appointments, staffing, and facilities/
+security remain false. A 3,213-matter pending increase triggers immutable
+successor version 2 without authorizing any justice action.
+
+The definition-matched 365-day comparison is illustrative, not an official
+peer or target. A custodied cross-jurisdiction comparator remains corpus work.
+
 ## What this proves
 
 - Filed, terminated, and pending work can be reconciled.
@@ -96,6 +136,7 @@ cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 cargo run --quiet -- level2-baseline fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
+cargo run --quiet -- program-held-pack fixtures/synthetic/justice-semantic-program.tsv
 ```
 
 Official anchor: [Federal Judicial Caseload Statistics 2025](https://www.uscourts.gov/data-news/reports/statistical-reports/federal-judicial-caseload-statistics/federal-judicial-caseload-statistics-2025).

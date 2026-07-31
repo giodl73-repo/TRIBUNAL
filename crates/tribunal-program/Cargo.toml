@@ -1,0 +1,9 @@
+[package]
+name = "tribunal-program"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Rights-bounded justice semantic program features for TRIBUNAL"
+
+[lib]
+path = "src/lib.rs"
