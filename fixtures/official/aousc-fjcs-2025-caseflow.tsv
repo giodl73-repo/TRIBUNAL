@@ -1,0 +1,10 @@
+# source_id=AOUSC-FJCS-2025
+# evidence_label=official_aggregate
+# reporting_period=12_months_ending_2025-03-31
+# derivation=published_2024_and_2025_national_toplines
+# boundary=cases_and_defendants_are_source-labelled_units_not_people_or_rights_outcomes
+segment	pending_start	filed	terminated	pending_end
+appeals	31531	40612	39631	32827
+district_civil	633066	271802	507326	398121
+district_criminal_defendants	113511	73644	77252	109654
+bankruptcy	652148	529080	517515	663622
