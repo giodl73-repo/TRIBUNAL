@@ -5,6 +5,7 @@
 # period_end=2026-03-31
 # legislative_candidate=H.R. 1702 JUDGES Act of 2025
 # legislative_status=ordered_reported_house_committee_not_enacted
+# legislative_status_checked_as_of=2026-07-31
 period_end	filings	terminations	pending	judgeships	vacant_judgeship_months_tenths	weighted_filings_per_judgeship	criminal_felony_defendants	immigration_felony_defendants
 2025-03-31	15416	14823	14942	19	203	628	6803	5095
 2026-03-31	21226	17936	18155	19	460	801	9754	8049

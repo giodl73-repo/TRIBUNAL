@@ -77,6 +77,12 @@ appropriation, and appointment, confirmation, staffing, facilities, security,
 and technology milestones remain unresolved. The candidate therefore stays
 held.
 
+The legislative gate was rechecked on **July 31, 2026**. Congress.gov still
+shows committee action only: H.R. 1702 was ordered reported as amended on March
+5, 2025 and has not passed the House or become law. Sixteen listed cosponsors do
+not change enactment, appropriation, appointment, staffing, facility/security,
+rights-floor, outcome, or fiscal-admission gates.
+
 ### Level 2 comparison baseline
 
 The March 2026 AOUSC profile now anchors one district and one published case
