@@ -12,8 +12,11 @@ independence, evidence integrity, or contestability.
 2. Official aggregate caseload and interval source pack.
 3. One bounded scheduling, diversion, or service-delivery candidate —
    implemented as the held H.R. 1702 district-court capacity envelope.
-4. Cost, capacity, disparate-effect, and reintegration audit.
-5. Independently reviewed held Taxlane pack.
+4. District/case-type comparison baseline — implemented for Texas Southern
+   immigration felony-defendant workload; rights and causal measures remain
+   null.
+5. Cost, capacity, disparate-effect, and reintegration audit.
+6. Independently reviewed held Taxlane pack.
 
 ## Non-goals
 

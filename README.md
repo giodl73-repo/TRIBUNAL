@@ -24,6 +24,8 @@ strong aggregate termination volume.
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
 cargo run --quiet -- candidate-baseline fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
 cargo run --quiet -- candidate-held-pack fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
+cargo run --quiet -- level2-baseline fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
+cargo run --quiet -- level2-held-pack fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
 cargo run --quiet -- held-pack fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 cargo run --quiet -- official-held-pack fixtures/official/aousc-fjcs-2025-caseflow.tsv
@@ -59,6 +61,23 @@ appropriation, and appointment, confirmation, staffing, facilities, security,
 and technology milestones remain unresolved. The candidate therefore stays
 held.
 
+### Level 2 comparison baseline
+
+The March 2026 AOUSC profile now anchors one district and one published case
+type. In the Southern District of Texas, annual filings increased from 15,416
+to **21,226** (+37.7%), pending work increased by **3,213** to 18,155, and
+weighted filings reached **801 per authorized judgeship**. The profile reports
+**46.0 vacant judgeship months** across 19 authorized seats.
+
+Immigration accounted for **8,049 of 9,754 criminal felony-defendant filings**
+(82.5%). That is a nested workload count, not a count of unique people and not
+evidence that immigration cases caused the district-wide change.
+
+This closes the district/case-type comparison-baseline gate, but not Level 2
+admission. The source does not publish matched measures for counsel access,
+pretrial detention, victim notice, disparity, or candidate effects. H.R. 1702
+also remains unenacted. Those values stay null, so the candidate stays held.
+
 ## What this proves
 
 - Filed, terminated, and pending work can be reconciled.
@@ -76,6 +95,7 @@ cargo fmt --check
 cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
+cargo run --quiet -- level2-baseline fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
 ```
 
 Official anchor: [Federal Judicial Caseload Statistics 2025](https://www.uscourts.gov/data-news/reports/statistical-reports/federal-judicial-caseload-statistics/federal-judicial-caseload-statistics-2025).
@@ -83,6 +103,8 @@ Official anchor: [Federal Judicial Caseload Statistics 2025](https://www.uscourt
 Candidate sources: [CBO H.R. 1702 cost estimate](https://www.cbo.gov/publication/61263),
 [Congress.gov H.R. 1702 status](https://www.congress.gov/bill/119th-congress/house-bill/1702/all-info),
 and [Judicial Conference 2025 judgeship recommendations](https://www.uscourts.gov/data-news/judiciary-news/2025/03/11/judiciary-seeks-71-judgeships-meet-growing-caseloads).
+
+Level 2 source: [AOUSC Federal Court Management Statistics, March 31, 2026 district profiles](https://www.uscourts.gov/sites/default/files/document/fcms_na_distprofile0331.2026.pdf).
 
 ## Boundary
 
