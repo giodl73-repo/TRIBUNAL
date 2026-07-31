@@ -1,0 +1,6 @@
+# evidence_label=synthetic_aggregate_example
+# source_id=AOUSC-FJCS-2025
+segment	filed	terminated	pending_start	pending_end	median_days	counsel_access_bps	victim_notice_bps	pretrial_detention_days	disparity_ratio_milli
+initial	12000	10800	5000	6200	35	9000	8600	24	1120
+complex	3000	2700	2200	2500	140	8400	8200	41	1280
+reentry	1800	1650	900	1050	75	8800	7900	0	1190
