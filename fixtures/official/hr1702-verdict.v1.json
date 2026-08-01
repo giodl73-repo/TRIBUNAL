@@ -1,0 +1,26 @@
+{
+  "assessment_id": "tribunal-hr1702-candidate:2026-07-31",
+  "schema": "vtrace.verdict-candidate-assessment.v1",
+  "object_class": "candidate",
+  "candidate_id": "hr1702_judges_act_2025",
+  "producer": "TRIBUNAL",
+  "producer_commit": "202f470aaffff78613f69c06da57b8c82aff4c63",
+  "fiscal_owner": "TAXLANE",
+  "scores": {"value":1,"effectiveness":1,"resilience":1,"deliverability":1,"iteration":1,"coverage_and_fair_access":1,"trust":3,"total":9,"possible":21,"minimum":1,"total_is_gate_disposition":false},
+  "dimension_reviews": [
+    {"dimension":"value","recommended_disposition":"required_blocked","hold":"useful justice outcome denominator, lifecycle and supporting-system cost, observed benefit, and compatible alternative missing"},
+    {"dimension":"effectiveness","recommended_disposition":"required_blocked","hold":"unenacted bill has no staffed-seat exposure or matched justice effect"},
+    {"dimension":"resilience","recommended_disposition":"required_blocked","hold":"stress, recovery, surge, continuity, and institutional resilience missing"},
+    {"dimension":"deliverability","recommended_disposition":"required_blocked","hold":"enactment, appropriation, appointment, confirmation, staff, facilities, security, technology, and operating milestones missing"},
+    {"dimension":"iteration","recommended_disposition":"required_blocked","hold":"operating loop, response authority, outcome learning, rollback or retirement, and fiscal rebalancing missing"},
+    {"dimension":"coverage_and_fair_access","recommended_disposition":"required_blocked","hold":"candidate-matched counsel, liberty, victim, disparity, due-process, and subgroup results missing"},
+    {"dimension":"trust","recommended_disposition":"required_ready","evidence":"official CBO, AOUSC, and Congress sources, component reconciliation, nested-count warnings, replayable packs, roles, and claim boundaries"}
+  ],
+  "producer_evidence": [
+    {"command":"cargo run --quiet -- candidate-held-pack fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv","pack_id":"tribunal:hr1702-judges-act-2025:v1"},
+    {"command":"cargo run --quiet -- level2-held-pack fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv","pack_id":"tribunal:txsd-immigration-caseflow-2026:v1"}
+  ],
+  "accounting_boundaries": {"judge_compensation_direct_millions":111,"court_operations_appropriated_millions":283,"combined_cost_millions":394,"capacity_is_justice_outcome":false,"workload_is_savings":false},
+  "next_evidence_action": "After enactment and staffed delivery, follow matched districts and case types through caseflow, rights, safety, durable resolution, supporting capacity, cost, and uncertainty.",
+  "authority": {"individual_decision":false,"judicial_recommendation":false,"taxlane_admission":false,"savings":false,"allocation":false,"rate_change":false,"release":false}
+}

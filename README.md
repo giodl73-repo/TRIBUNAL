@@ -12,6 +12,11 @@ scores the current program **14/21**. Enactment, matched rights outcomes,
 institutional delivery effects, and fiscal authority remain held until the
 necessary observations exist.
 
+The owner-aligned [H.R. 1702 candidate assessment](docs/vtrace/HR1702_CANDIDATE_ASSESSMENT.md)
+scores its evidence **9/21**. Cost and workload baselines are trustworthy, but
+only Trust is admission-ready while enactment, staffed delivery, justice
+effects, rights, access, resilience, and learning remain held.
+
 Its first official run now reconciles four AOUSC national workload series. The
 published 2024 start, 2025 filings, terminations, and 2025 end counts imply a
 net **+554 statistical adjustment**; district civil has the largest absolute
