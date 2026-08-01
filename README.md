@@ -7,6 +7,11 @@ resolution and pending-change measures, and separately tests counsel, victim
 notice, pretrial liberty, and disparity floors. A throughput improvement cannot
 pass if any rights floor fails.
 
+The repo-local [VERDICT capability assessment](docs/vtrace/CAPABILITY_ASSESSMENT.md)
+scores the current program **14/21**. Enactment, matched rights outcomes,
+institutional delivery effects, and fiscal authority remain held until the
+necessary observations exist.
+
 Its first official run now reconciles four AOUSC national workload series. The
 published 2024 start, 2025 filings, terminations, and 2025 end counts imply a
 net **+554 statistical adjustment**; district civil has the largest absolute
