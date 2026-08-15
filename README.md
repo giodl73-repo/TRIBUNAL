@@ -1,56 +1,50 @@
 # TRIBUNAL
 
-**Justice 2.0 — improve caseflow without optimizing away rights.**
+**Justice 2.0 — speed is not justice if rights are the thing being optimized
+away.**
 
-TRIBUNAL compares aggregate caseflow segments, calculates
-resolution and pending-change measures, and separately tests counsel, victim
-notice, pretrial liberty, and disparity floors. A throughput improvement cannot
-pass if any rights floor fails.
+TRIBUNAL is a rights-bounded caseflow laboratory. It compares aggregate
+workload and resolution while testing counsel, victim notice, pretrial liberty,
+and disparity as independent floors. Its portable principle is simple:
+**throughput earns promotion only after rights do**.
 
-TRIBUNAL now carries that screen through a complete bounded semantic program.
-Thirteen executable features cover caseflow, official national workload, the
-H.R. 1702 candidate and district baseline, scenarios, rights-bounded
-realization, transition/security accounting, alternatives, incidence, delivery
-feasibility, adaptive successors, normalized illustrative comparison, and an
-integrated held handoff.
+That rule changes how ordinary court statistics are read. TRIBUNAL's official
+AOUSC replay preserves a **+554-case statistical adjustment** rather than
+forcing published toplines into a false identity. In the synthetic Cedar
+example, 10,800 of 12,000 matters terminate, yet weak counsel access, victim
+notice, and liberty measures keep the result held. More movement is evidence;
+it is not automatically better justice.
 
-Its first official run now reconciles four AOUSC national workload series. The
-published 2024 start, 2025 filings, terminations, and 2025 end counts imply a
-net **+554 statistical adjustment**; district civil has the largest absolute
-adjustment at **579 cases**. TRIBUNAL preserves that adjustment instead of
-silently forcing the source toplines into an exact identity.
+The stakes are practical: capacity proposals can otherwise look successful
+before anyone has shown that people received timely, contestable, rights-
+compliant resolution. TRIBUNAL makes that missing evidence visible without
+making an individual justice decision.
 
-In the fictional Cedar example, 12,000 matters enter and 10,800 terminate, but
-the counsel-access floor is 84%, victim-notice floor is 79%, and the longest
-median pretrial detention is 41 days. The result is therefore held despite
-strong aggregate termination volume.
+## Start here
 
-## Try it
+Run the synthetic caseflow screen first, then compare it with the official
+national baseline:
 
 ```powershell
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
-cargo run --quiet -- candidate-baseline fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
-cargo run --quiet -- candidate-held-pack fixtures/official/cbo-hr1702-judges-act-2025-cost-estimate.tsv
-cargo run --quiet -- level2-baseline fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
-cargo run --quiet -- level2-held-pack fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
 cargo run --quiet -- held-pack fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
-cargo run --quiet -- official-held-pack fixtures/official/aousc-fjcs-2025-caseflow.tsv
-cargo run --quiet -- program-scenarios fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-realization fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-accounting fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-alternatives fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-incidence fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-delivery fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-adaptive fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-peers fixtures/synthetic/justice-semantic-program.tsv
-cargo run --quiet -- program-held-pack fixtures/synthetic/justice-semantic-program.tsv
 ```
 
-The Cedar fixture remains synthetic. The official baseline is a compact,
-source-labelled derivation of AOUSC's published national toplines; its cases and
-criminal defendants remain distinct source units and do not describe people,
-rights quality, or the reason for any adjustment.
+The first command reports the Cedar measures. The second emits the held
+handoff, showing which rights floors block promotion. The third reconciles the
+public AOUSC workload series. The Cedar fixture is synthetic; the official
+baseline is a compact, source-labelled derivation whose cases and criminal
+defendants remain distinct source units.
+
+Next:
+
+- Read the [semantic-program map](docs/program/SEMANTIC_PROGRAM.md) for the
+  complete thirteen-feature evidence chain.
+- Run `candidate-baseline` for the H.R. 1702 cost replay and
+  `level2-baseline` for the Southern District of Texas comparison.
+- Run `program-held-pack` to inspect the complete bounded handoff without
+  granting judicial or fiscal authority.
 
 ## Federal court-capacity candidate
 
@@ -158,3 +152,7 @@ Level 2 source: [AOUSC Federal Court Management Statistics, March 31, 2026 distr
 TRIBUNAL is aggregate research software. It is not legal advice, an individual
 risk assessment, detention or release guidance, a judicial recommendation,
 official score, savings claim, allocation, rate instruction, or release authorization.
+
+## License
+
+[MIT](LICENSE) — © 2026 Gio Della-Libera.
