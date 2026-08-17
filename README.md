@@ -147,6 +147,16 @@ and [Judicial Conference 2025 judgeship recommendations](https://www.uscourts.go
 
 Level 2 source: [AOUSC Federal Court Management Statistics, March 31, 2026 district profiles](https://www.uscourts.gov/sites/default/files/document/fcms_na_distprofile0331.2026.pdf).
 
+## Reuse boundary
+
+TRIBUNAL is intentionally a specialist aggregate research lab, not a shared
+policy engine or portfolio library. Its caseflow, judicial-capacity,
+rights-floor, and decisional-authority types remain domain-owned. Other
+repositories may reuse the evidence-gating method and consume bounded findings,
+but should not depend on TRIBUNAL crates or treat its schema as a generic policy
+contract. Reconsider extraction only when a named downstream adopter requires
+the same stable schema across at least two policy domains.
+
 ## Boundary
 
 TRIBUNAL is aggregate research software. It is not legal advice, an individual
