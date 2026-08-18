@@ -134,10 +134,17 @@ peer or target. A custodied cross-jurisdiction comparator remains corpus work.
 cargo fmt --check
 cargo test --workspace --all-targets
 cargo run --quiet -- analyze fixtures/cedar-caseflow.tsv
+cargo run --quiet -- held-pack fixtures/cedar-caseflow.tsv
 cargo run --quiet -- official-baseline fixtures/official/aousc-fjcs-2025-caseflow.tsv
 cargo run --quiet -- level2-baseline fixtures/official/aousc-texas-southern-2026-rights-baseline.tsv
 cargo run --quiet -- program-held-pack fixtures/synthetic/justice-semantic-program.tsv
 ```
+
+The retained Cedar proof uses the `analyze` and `held-pack` commands as an
+accepted/held pair. `analyze` emits the reconciled synthetic caseflow result. `held-pack` emits a
+structured `taxlane.lane-evidence-pack-candidate.v1` rejection with
+`taxlane_admission_ready:false` and `public_release_allowed:false`; incomplete
+rights and fiscal evidence cannot be promoted silently.
 
 Official anchor: [Federal Judicial Caseload Statistics 2025](https://www.uscourts.gov/data-news/reports/statistical-reports/federal-judicial-caseload-statistics/federal-judicial-caseload-statistics-2025).
 
